@@ -14,5 +14,5 @@ jobs:
           # git config --global user.name "github-actions"
           ## git config --global user.email "github-actions@github.com"
           git fetch origin testbranch2
-          git merge origin/testbranch2
-          git push
+          git checkout testbranch2
+          git push origin HEAD:testbranch3
