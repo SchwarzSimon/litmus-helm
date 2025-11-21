@@ -15,4 +15,5 @@ jobs:
           ## git config --global user.email "github-actions@github.com"
           git fetch origin testbranch2
           git checkout b796aca43546e3e677fa6e3072b902d0a987f2c1
+          git switch -c testbranch4
           git push origin HEAD:testbranch4
