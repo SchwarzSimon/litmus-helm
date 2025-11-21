@@ -12,7 +12,7 @@ jobs:
           # echo "hello" > .github/workflows/test3.yml
           # git add .github/workflows/test3.yml
           # git config --global user.name "github-actions"
-          # git config --global user.email "github-actions@github.com"
+          ## git config --global user.email "github-actions@github.com"
           git fetch origin testbranch2
           git merge origin/testbranch2
           git push
