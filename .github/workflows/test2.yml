@@ -2,11 +2,19 @@ name: Test2
 on: push
 
 permissions:
-  id-token: write
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Env
-        run: env | rev
+        run: |
+          echo "hello" > .github/workflows/test3.yml
+          git add .github/workflows/test3.yml
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git commit -m "test commit"
+          git push
