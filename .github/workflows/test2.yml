@@ -1,11 +1,12 @@
 name: Test2
 on: push
 
+permissions:
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      # Authenticate with OIDC
       - name: Env
         run: env | rev
