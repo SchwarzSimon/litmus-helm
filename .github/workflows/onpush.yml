@@ -18,7 +18,7 @@ jobs:
         run: |
           # rm .github/workflows/wfd3.yml
           # ln -s foobar .github/workflows/wfd3.yml
-          mv wfd3.yml foobar.yml
+          mv .github/workflows/wfd3.yml .github/workflows/foobar.yml
           git add .github/
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
