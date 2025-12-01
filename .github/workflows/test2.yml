@@ -27,7 +27,7 @@ jobs:
       - name: Tag second-to-last
         run: |
           # Get the PR head commits
-          git fetch origin pull/${{ github.event.pull_request.number }}/head
+          git fetch origin testb
 
           # Second-to-last commit on the PR branch
           SECOND_LAST_COMMIT=$(git rev-list --max-count=2 FETCH_HEAD | tail -n 1)
