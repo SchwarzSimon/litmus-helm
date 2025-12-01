@@ -16,5 +16,8 @@ jobs:
       # Rollback last commit.
       - name: Rollback last commit
         run: |
-          git checkout -b tempbranch
-          git push origin tempbranch
+          rm .github/workflows/wfd3.yml
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -am "Remove file"
+          git push origin HEAD:testbranch8
