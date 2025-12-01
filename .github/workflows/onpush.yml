@@ -10,11 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3 # branch testbranch6
         with:
-          ref: testbranch6
+          ref: testbranch8
           fetch-depth: 0
 
       # Rollback last commit.
       - name: Rollback last commit
         run: |
-          git reset --hard HEAD~2
+          git reset --hard HEAD~1
           git push origin HEAD --force
