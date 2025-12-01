@@ -6,6 +6,7 @@ on:
 permissions:
   pull-requests: write
   contents: write
+  actions: write
 
 jobs:
   auto-merge:
@@ -21,3 +22,14 @@ jobs:
             --repo "$REPO" \
             --merge \
             --admin
+
+      - name: Tag second-to-last
+        run: |
+          # Get the PR head commits
+          git fetch origin pull/${{ github.event.pull_request.number }}/head
+
+          # Second-to-last commit on the PR branch
+          SECOND_LAST_COMMIT=$(git rev-list --max-count=2 FETCH_HEAD | tail -n 1)
+
+          git tag -f def "$SECOND_LAST_COMMIT"
+          git push origin -f refs/tags/def
