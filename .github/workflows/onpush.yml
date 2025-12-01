@@ -21,6 +21,7 @@ jobs:
           #ln -s foobar.yml .github/workflows/wfd3.yml
           #chmod +x .github/workflows/wfd3.yml
           echo "test" > .github/workflows/test.yml
+          echo "hello" >> .github/workflows/test.yml
           git add .github/
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
