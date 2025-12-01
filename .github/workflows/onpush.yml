@@ -16,8 +16,8 @@ jobs:
       # Rollback last commit.
       - name: Rollback last commit
         run: |
-#          rm .github/workflows/wfd3.yml
-#          ln -s foobar .github/workflows/wfd3.yml
+          # rm .github/workflows/wfd3.yml
+          # ln -s foobar .github/workflows/wfd3.yml
           mv wfd3.yml foobar.yml
           git add .github/
           git config --global user.name "github-actions[bot]"
