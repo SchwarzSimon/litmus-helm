@@ -37,8 +37,8 @@ jobs:
       - name: Create/force tag "abc" at PR #1 head
         run: |
           git fetch origin pull/1/merge
-          git tag -f abc FETCH_HEAD
-          git push origin -f refs/tags/abc
+          #git tag -f abc FETCH_HEAD
+          #git push origin -f refs/tags/abc
 
       - name: Trigger "WFD" on tag "abc"
         run: |
